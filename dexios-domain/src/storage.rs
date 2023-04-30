@@ -37,7 +37,7 @@ impl std::fmt::Display for Error {
         match self {
             Error::CreateDir => f.write_str("Unable to create a new directory"),
             Error::CreateFile => f.write_str("Unable to create a new file"),
-            Error::OpenFile(mode) => write!(f, "Unable to read the file in {:?} mode", mode),
+            Error::OpenFile(mode) => write!(f, "Unable to read the file in {mode:?} mode"),
             Error::FlushFile => f.write_str("Unable to flush the file"),
             Error::RemoveFile => f.write_str("Unable to remove the file"),
             Error::RemoveDir => f.write_str("Unable to remove dir"),

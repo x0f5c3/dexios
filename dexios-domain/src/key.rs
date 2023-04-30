@@ -105,5 +105,5 @@ pub fn encrypt_master_key(
 
     let master_key_encrypted = master_key_result.map_err(|_| Error::MasterKeyEncrypt)?;
 
-    Ok(vec_to_arr(master_key_encrypted))
+    Ok(vec_to_arr::<ENCRYPTED_MASTER_KEY_LEN>(master_key_encrypted))
 }

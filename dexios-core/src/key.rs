@@ -184,7 +184,7 @@ pub fn decrypt_master_key(
 }
 
 // TODO: choose better place for this util
-/// This is a simple helper function, used for converting the 32-byte master key `Vec<u8>`s to `[u8; 32]`
+/// This is a simple helper function, used for converting the N-byte master key `Vec<u8>`s to `[u8; N]`
 #[must_use]
 pub fn vec_to_arr<const N: usize>(mut master_key_vec: Vec<u8>) -> [u8; N] {
     let mut master_key = [0u8; N];

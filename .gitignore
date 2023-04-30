@@ -1,4 +1,5 @@
 .cargo/
+.idea
 
 .envrc
 .direnv/
